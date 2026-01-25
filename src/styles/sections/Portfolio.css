@@ -1,0 +1,156 @@
+.portfolio {
+  padding: 6rem 1.5rem;
+  background-color: #fafafa;
+}
+
+.portfolio__header {
+  max-width: 720px;
+  margin: 0 auto 4rem;
+  text-align: center;
+}
+
+.portfolio__header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio__header p {
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Grid */
+.portfolio__grid {
+  display: grid;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* Card */
+.portfolio-card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+}
+
+.portfolio-card__meta {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.portfolio-card__meta span {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  background-color: #111;
+  color: #fff;
+}
+
+.portfolio-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.75rem;
+}
+
+.portfolio-card__description {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Resultados */
+.portfolio-card__results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.portfolio-card__results li {
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* CTA */
+.portfolio__cta {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.portfolio__cta p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.75rem;
+  background-color: #111;
+  color: #fff;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: #000;
+}
+@media (max-width: 768px) {
+  .portfolio {
+    padding: 4rem 1rem;
+  }
+
+  .portfolio__header {
+    margin-bottom: 3rem;
+  }
+
+  .portfolio__header h2 {
+    font-size: 1.8rem;
+  }
+
+  .portfolio__header p {
+    font-size: 0.95rem;
+  }
+
+  .portfolio-card {
+    padding: 1.5rem;
+  }
+
+  .portfolio-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .portfolio-card__description {
+    font-size: 0.95rem;
+  }
+
+  .portfolio-card__results li {
+    font-size: 0.85rem;
+  }
+
+  .portfolio__cta {
+    margin-top: 3rem;
+  }
+
+  .portfolio__cta p {
+    font-size: 1rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    max-width: 320px;
+  }
+}
