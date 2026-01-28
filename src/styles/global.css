@@ -1,35 +1,40 @@
 :root {
-  --primary-color: #1F706C;
-  --secondary-color: #D5B1EF;
-  --light-text-color: #BBF0ED;
-  --dark-text-color: #0F172A;
+  --color-primary: #2F8F8B;
+  --color-secondary: #1F5E5B;
+  --color-background: #F9FAFA;
+  --color-text-primary: #1E1E1E;
+  --color-text-secondary: #6B7280;
+  --color-accent: #4FBFB9
+
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: var(--color-background);
 }
 
 
 .header {
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
-
-  border-bottom: 1px solid rgba(58, 167, 163, 0.25);
-  background-image: radial-gradient(circle, var(--light-text-color), var(--secondary-color) );
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-secondary);
 }
 
 /* Desktop */
 .header__left {
   display: flex;
   justify-content: center;
+  background-color: var(--color-background);
 }
 
 .header__left img {
   height: 70px;
   width: auto;
+  background-color: var(--color-background);
   margin: 1rem;
 }
 
@@ -38,38 +43,46 @@
   font-size: 0.85rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--dark-text-color);
+}
+
+.header__center h2 {
+  color: var(--color-secondary);
+}
+
+.header__right{
+  display: flex;
+  justify-content: flex-end;
 }
 
 .header__right button {
-  background: linear-gradient(135deg, #1f6f6b, #3aa7a3);
-  color: white;
+  background: transparent;
+  color: var(--color-text-primary);
   border: none;
-  padding: 0.7rem 1.5rem;
-  margin: 1.5rem;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
   letter-spacing: 0.1em;
   cursor: pointer;
 
 }
+.header__right button:hover {
+  background-color: var(--color-accent);
+  border-bottom: 2px solid var(--color-accent);
+  text-decoration: underline;
+}
 
-@media (max-width: 500px) {
-  .header {
-    grid-template-columns: auto auto;
-    justify-content: space-between;
-  }
+.header__right .cta {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
 
-  .header__center {
-    display: none;
-  }
-
-  .header__left img {
-    height: 36px;
-  }
-
-  .header__right button {
-    padding: 0.6rem 1.2rem;
-    font-size: 0.75rem;
-  }
+.header__right .cta:hover { 
+  background: var(--color-accent); 
+  color: var(--color-text-primary); 
+  text-decoration: underline;
 }
 
 .footer {
