@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/sections/404.css';
+---
+
+<BaseLayout>
+  <section class="error-page">
+    <div class="error-container">
+      <div class="error-content">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-title">Página no encontrada</h2>
+        <p class="error-description">
+          Lo sentimos, la página que estás buscando no existe o ha sido movida. 
+          Pero no te preocupes, estamos aquí para ayudarte.
+        </p>
+        
+        <div class="error-actions">
+          <a href="/" class="btn-primary">Volver al inicio</a>
+          <a href="/#services" class="btn-secondary">Ver servicios</a>
+        </div>
+
+        <div class="error-suggestions">
+          <h3>¿Necesitas ayuda?</h3>
+          <p>Contacta con nuestro equipo para resolver cualquier inconveniente</p>
+          <button class="btn-contact">Hablemos</button>
+        </div>
+      </div>
+
+      <div class="error-decoration">
+        <div class="decoration-circle decoration-circle--1"></div>
+        <div class="decoration-circle decoration-circle--2"></div>
+        <div class="decoration-circle decoration-circle--3"></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

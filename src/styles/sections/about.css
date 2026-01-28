@@ -1,0 +1,259 @@
+.about {
+  padding: 5rem 2.5rem;
+  background: linear-gradient(
+    135deg,
+    rgba(31, 112, 108, 0.05),
+    rgba(213, 177, 239, 0.05)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(58, 167, 163, 0.15), transparent);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.about__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Intro Section */
+.about__intro {
+  text-align: center;
+  margin-bottom: 4rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.about__intro h2 {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about__intro p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #334155;
+}
+
+/* Misión y Visión */
+.about__values {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+}
+
+.value-card {
+  padding: 2.5rem;
+  background: white;
+  border: 1px solid rgba(31, 112, 108, 0.15);
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(31, 112, 108, 0.08);
+  transition: all 0.3s ease;
+}
+
+.value-card:hover {
+  border-color: rgba(31, 112, 108, 0.3);
+  box-shadow: 0 8px 24px rgba(31, 112, 108, 0.15);
+  transform: translateY(-4px);
+}
+
+.value-card h3 {
+  color: var(--primary-color);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.value-card p {
+  color: #334155;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Team Section */
+.about__team {
+  margin-top: 3rem;
+}
+
+.about__team-title {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--primary-color);
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+}
+
+.team-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(31, 112, 108, 0.1);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.team-member:hover {
+  border-color: rgba(31, 112, 108, 0.3);
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 8px 24px rgba(31, 112, 108, 0.1);
+  transform: translateY(-8px);
+}
+
+/* Member Image */
+.member-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+  border: 3px solid var(--primary-color);
+  box-shadow: 0 6px 20px rgba(31, 112, 108, 0.2);
+  flex-shrink: 0;
+}
+
+.member-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Member Info */
+.member-info h4 {
+  font-size: 1.3rem;
+  color: var(--dark-text-color);
+  margin: 0 0 0.5rem 0;
+  font-weight: 700;
+}
+
+.member-role {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.member-bio {
+  color: #334155;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about {
+    padding: 3.5rem 2rem;
+  }
+
+  .about__intro h2 {
+    font-size: 1.8rem;
+  }
+
+  .about__intro p {
+    font-size: 0.95rem;
+  }
+
+  .about__values {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .value-card {
+    padding: 2rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .member-image {
+    width: 130px;
+    height: 130px;
+  }
+
+  .member-info h4 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .about__intro h2 {
+    font-size: 1.5rem;
+  }
+
+  .about__intro p {
+    font-size: 0.9rem;
+  }
+
+  .about__team-title {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .value-card {
+    padding: 1.5rem;
+  }
+
+  .value-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .value-card p {
+    font-size: 0.9rem;
+  }
+
+  .team-member {
+    padding: 1rem;
+  }
+
+  .member-image {
+    width: 120px;
+    height: 120px;
+  }
+
+  .member-info h4 {
+    font-size: 1rem;
+  }
+
+  .member-role {
+    font-size: 0.8rem;
+  }
+
+  .member-bio {
+    font-size: 0.9rem;
+  }
+}

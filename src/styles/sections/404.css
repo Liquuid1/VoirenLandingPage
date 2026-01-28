@@ -1,0 +1,283 @@
+.error-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(31, 112, 108, 0.05),
+    rgba(213, 177, 239, 0.05)
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.error-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 100%;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.error-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.error-code {
+  font-size: 8rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: -0.05em;
+}
+
+.error-title {
+  font-size: 2rem;
+  color: var(--dark-text-color);
+  margin: 0;
+  font-weight: 700;
+}
+
+.error-description {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-color), #3aa7a3);
+  color: white;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(31, 112, 108, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+  background: var(--primary-color);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.error-suggestions {
+  margin-top: 2rem;
+  padding: 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(31, 112, 108, 0.1),
+    rgba(213, 177, 239, 0.1)
+  );
+  border-radius: 1rem;
+  border: 1px solid rgba(31, 112, 108, 0.2);
+}
+
+.error-suggestions h3 {
+  margin: 0 0 0.5rem 0;
+  color: var(--dark-text-color);
+  font-size: 1.2rem;
+}
+
+.error-suggestions p {
+  margin: 0 0 1rem 0;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.btn-contact {
+  background: var(--secondary-color);
+  color: var(--dark-text-color);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.05em;
+}
+
+.btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(213, 177, 239, 0.4);
+}
+
+.error-decoration {
+  position: relative;
+  height: 300px;
+  display: none;
+}
+
+.decoration-circle {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+}
+
+.decoration-circle--1 {
+  width: 200px;
+  height: 200px;
+  background: var(--primary-color);
+  top: 0;
+  right: 0;
+  animation: float 6s ease-in-out infinite;
+}
+
+.decoration-circle--2 {
+  width: 300px;
+  height: 300px;
+  background: var(--secondary-color);
+  bottom: -50px;
+  left: -100px;
+  animation: float 8s ease-in-out infinite 1s;
+}
+
+.decoration-circle--3 {
+  width: 150px;
+  height: 150px;
+  background: var(--primary-color);
+  bottom: 50px;
+  right: 50px;
+  animation: float 7s ease-in-out infinite 2s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .error-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .error-code {
+    font-size: 6rem;
+  }
+
+  .error-title {
+    font-size: 1.5rem;
+  }
+
+  .error-description {
+    font-size: 1rem;
+  }
+
+  .error-decoration {
+    display: block;
+  }
+
+  .error-actions {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .error-page {
+    padding: 1rem;
+    min-height: auto;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .error-container {
+    gap: 1.5rem;
+  }
+
+  .error-code {
+    font-size: 4rem;
+  }
+
+  .error-title {
+    font-size: 1.3rem;
+  }
+
+  .error-description {
+    font-size: 0.95rem;
+  }
+
+  .error-suggestions {
+    padding: 1.5rem;
+  }
+
+  .error-suggestions h3 {
+    font-size: 1rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.95rem;
+  }
+
+  .decoration-circle {
+    opacity: 0.05;
+  }
+
+  .decoration-circle--1 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .decoration-circle--2 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .decoration-circle--3 {
+    width: 100px;
+    height: 100px;
+  }
+}
