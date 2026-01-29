@@ -1,13 +1,3 @@
-:root {
-  --color-primary: #2F8F8B;
-  --color-secondary: #1F5E5B;
-  --color-background: #F9FAFA;
-  --color-text-primary: #1E1E1E;
-  --color-text-secondary: #6B7280;
-  --color-accent: #4FBFB9
-
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -77,6 +67,7 @@
   padding: 0.6rem 1.2rem;
   border-radius: 4px;
   cursor: pointer;
+  transition: all 0.3s ease;
 }
 
 .header__right .cta:hover { 
