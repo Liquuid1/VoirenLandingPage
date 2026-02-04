@@ -10,37 +10,52 @@ import "../../styles/sections/Services.css"
     </p>
   </header>
 
-  <div class="services__grid">
-    <article class="service">
-      <h3>Integraciones</h3>
-      <p>
-        ¿Contrataste un servicio que necesita conectarse con tus herramientas?
-        Diseñamos integraciones seguras para que tus sistemas hablen entre sí.
-      </p>
-    </article>
+  <div class="services__carousel-wrapper">
+    <button class="services__nav services__nav--prev" aria-label="Anterior">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="15 18 9 12 15 6"></polyline>
+      </svg>
+    </button>
+    
+    <div class="services__plans">
+      <article class="plan">
+        <h3>Integraciones</h3>
+        <p>Conectamos tus sistemas con seguridad y precisión.</p>
+        <span class="plan__tag">Ideal para herramientas externas</span>
+        <button class="plan__cta">Solicitar integración</button>
+      </article>
 
-    <article class="service">
-      <h3>Automatizaciones</h3>
-      <p>
-        Automatizamos procesos repetitivos y propensos al error humano,
-        optimizando tu flujo de trabajo y ahorrando tiempo.
-      </p>
-    </article>
+      <article class="plan">
+        <h3>Automatizaciones</h3>
+        <p>Optimiza tu flujo de trabajo y ahorra tiempo.</p>
+        <span class="plan__tag">Ahorra tiempo</span>
+        <button class="plan__cta">Automatiza tu proceso</button>
+      </article>
 
-    <article class="service">
-      <h3>Creación de sitios web</h3>
-      <p>
-        Desarrollamos sitios web rápidos, claros y escalables,
-        pensados para cumplir objetivos reales.
-      </p>
-    </article>
+      <article class="plan">
+        <h3>Sitios web</h3>
+        <p>Desarrollamos sitios rápidos, claros y escalables.</p>
+        <span class="plan__tag">Recomendado</span>
+        <button class="plan__cta">Solicitar desarrollo</button>
+      </article>
 
-    <article class="service">
-      <h3>Asesoría en marketing digital</h3>
-      <p>
-        Te ayudamos a definir y optimizar tu estrategia digital
-        para lograr resultados medibles.
-      </p>
-    </article>
+      <article class="plan">
+        <h3>Marketing digital</h3>
+        <p>Define y optimiza tu estrategia digital.</p>
+        <span class="plan__tag">Resultados medibles</span>
+        <button class="plan__cta">Solicitar asesoría</button>
+      </article>
+    </div>
+    
+    <button class="services__nav services__nav--next" aria-label="Siguiente">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="9 18 15 12 9 6"></polyline>
+      </svg>
+    </button>
   </div>
+
+
 </section>
+
+<script src="../../scripts/sections/services-carousel.js"></script>
+

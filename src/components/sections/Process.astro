@@ -1,7 +1,7 @@
 ---
 import "../../styles/sections/Process.css"
 ---
-<section class="process">
+<section class="process-journey">
   <header class="process__header">
     <h2>Un proceso claro, de principio a fin</h2>
     <p>
@@ -10,41 +10,53 @@ import "../../styles/sections/Process.css"
     </p>
   </header>
 
-  <div class="process__steps">
-    <article class="step">
+  <div class="journey-horizontal">
+    <!-- Paso 1 -->
+    <div class="journey-step">
       <span class="step__number">01</span>
-      <h3>Entendemos tu problema</h3>
-      <p>
-        Analizamos tu contexto y tus herramientas antes
-        de proponer cualquier solución.
-      </p>
-    </article>
+      <h4>Entendemos tu problema</h4>
+      <p>Analizamos tu contexto y tus herramientas antes de proponer cualquier solución.</p>
+    </div>
 
-    <article class="step">
+    <!-- Conector -->
+    <div class="journey-connector"></div>
+
+    <!-- Paso 2 -->
+    <div class="journey-step">
       <span class="step__number">02</span>
-      <h3>Definimos la solución</h3>
-      <p>
-        Diseñamos una propuesta clara, con alcances y
-        expectativas bien definidas.
-      </p>
-    </article>
+      <h4>Definimos la solución</h4>
+      <p>Diseñamos una propuesta clara, con alcances y expectativas bien definidas.</p>
+    </div>
 
-    <article class="step">
+    <!-- Conector -->
+    <div class="journey-connector"></div>
+
+    <!-- Paso 3 -->
+    <div class="journey-step">
       <span class="step__number">03</span>
-      <h3>Construimos y probamos</h3>
-      <p>
-        Desarrollamos, validamos y documentamos la solución
-        para asegurar calidad y estabilidad.
-      </p>
-    </article>
+      <h4>Construimos y probamos</h4>
+      <p>Desarrollamos, validamos y documentamos la solución para asegurar calidad y estabilidad.</p>
+    </div>
 
-    <article class="step">
+    <!-- Conector -->
+    <div class="journey-connector"></div>
+
+    <!-- Paso 4 -->
+    <div class="journey-step">
       <span class="step__number">04</span>
-      <h3>Implementamos y acompañamos</h3>
-      <p>
-        Te acompañamos en la puesta en marcha y quedamos
-        disponibles para soporte o mejoras.
-      </p>
-    </article>
+      <h4>Implementamos y acompañamos</h4>
+      <p>Te acompañamos en la puesta en marcha y quedamos disponibles para soporte o mejoras.</p>
+    </div>
   </div>
+
+    <!-- Triángulos decorativos -->
+  <div class="triangle primary t1"></div>
+  <div class="triangle accent t2"></div>
+  <div class="triangle secondary t3"></div>
+  <div class="triangle primary t4"></div>
+  <div class="triangle accent t5"></div>
+  <div class="triangle secondary t6"></div>
+
 </section>
+
+

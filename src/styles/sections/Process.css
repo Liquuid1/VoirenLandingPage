@@ -1,104 +1,155 @@
-:root {
-  --primary: #6366f1;   /* índigo moderno */
-  --dark: #0f172a;      /* slate-900 */
-  --muted: #64748b;     /* slate-500 */
-  --bg-soft: #f8fafc;   /* slate-50 */
-}
-.process {
-  background-color: var(--bg-soft);
-  padding: 6rem 1.5rem;
-}
-
-.process__container {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.process__header {
+.process-journey {
   text-align: center;
-  max-width: 640px;
-  margin: 0 auto 4rem;
+  padding: 4rem 2rem;
+  background: var(--color-background);
 }
 
 .process__header h2 {
-  font-size: clamp(2rem, 4vw, 2.75rem);
-  font-weight: 700;
-  color: var(--dark);
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 0.5rem;
 }
 
 .process__header p {
-  color: var(--muted);
-  font-size: 1.125rem;
-  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 3rem;
 }
-.process__steps {
-  display: grid;
+
+/* Contenedor horizontal */
+.journey-horizontal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .process__steps {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-.process__step {
-  background: white;
-  padding: 2.5rem 2rem;
-  border-radius: 1.25rem;
+  max-width: 1200px;
+  margin: 0 auto;
   position: relative;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.process__step:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+/* Cada paso */
+.journey-step {
+  flex: 1;
+  background: var(--color-background);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
+
+.journey-step h4 {
+  background: transparent;
+}
+
+.journey-step p {
+  background: transparent;
+}
+
+.journey-step:hover {
+  transform: translateY(-8px);
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.journey-step:hover p{
+  color: var(--color-background);
+}
+
 .step__number {
   display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  color: var(--primary);
-  background-color: rgba(99, 102, 241, 0.1);
-  padding: 0.4rem 0.75rem;
-  border-radius: 999px;
-  margin-bottom: 1.25rem;
-}
-.process__step h3 {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--dark);
-  margin-bottom: 0.75rem;
-}
-
-.process__step p {
+  background: var(--color-primary);
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50%;
+  padding: 0.6rem 1.2rem;
+  margin-bottom: 0.8rem;
   font-size: 1rem;
-  color: var(--muted);
-  line-height: 1.6;
 }
-@media (min-width: 768px) {
-  .process__steps {
-    position: relative;
+
+/* Conectores entre pasos */
+.journey-connector {
+  flex: 0 0 40px;
+  height: 4px;
+  background: var(--color-primary);
+  position: relative;
+}
+
+.journey-connector::after {
+  content: "→";
+  position: absolute;
+  right: -20px;
+  top: -40px;
+  font-size: 3.5rem;
+  color: var(--color-primary);
+}
+
+/* Títulos y textos */
+.journey-step h4 {
+  font-size: 1.1rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.journey-step p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .journey-horizontal {
+    flex-direction: column;
+    gap: 2rem;
   }
 
-  .process__steps::before {
-    content: "";
-    position: absolute;
-    top: 2.5rem;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(
-      to right,
-      transparent,
-      var(--primary),
-      transparent
-    );
-    z-index: 0;
+  .journey-connector {
+    width: 4px;
+    height: 40px;
   }
 
-  .process__step {
-    z-index: 1;
+  .journey-connector::after {
+    content: "↓";
+    right: auto;
+    left: -22px;
+    top: -20px;
+    font-size: 6rem;
   }
 }
+
+.process-journey {
+  position: relative;
+  padding: 4rem 2rem;
+  background: var(--color-background);
+  overflow: hidden;
+}
+
+/* Triángulos decorativos base */
+.triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+/* Variaciones de color */
+.triangle.primary { border-bottom: 140px solid var(--color-primary); }
+.triangle.accent { border-bottom: 140px solid var(--color-accent); }
+.triangle.secondary { border-bottom: 140px solid var(--color-secondary); }
+
+/* Posiciones fractales */
+.triangle.t1 { top: 40px; left: 10%; transform: rotate(-15deg); }
+.triangle.t2 { top: 120px; left: 35%; transform: rotate(20deg); }
+.triangle.t3 { top: 200px; left: 70%; transform: rotate(-25deg); }
+.triangle.t4 { bottom: 60px; left: 20%; transform: rotate(10deg); }
+.triangle.t5 { bottom: 100px; right: 15%; transform: rotate(-10deg); }
+.triangle.t6 { bottom: 180px; right: 40%; transform: rotate(25deg); }
+
+/* Asegurar que el contenido esté encima */
+.journey-horizontal {
+  position: relative;
+  z-index: 1;
+}
+
