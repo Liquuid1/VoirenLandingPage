@@ -1,76 +1,52 @@
 ---
 import "../../styles/sections/Portfolio.css"
 ---
-<section class="portfolio" id="portfolio">
-  <header class="portfolio__header">
-    <h2>Casos de éxito</h2>
-    <p>
-      Soluciones reales para problemas reales.
-      Automatizamos procesos, conectamos herramientas y construimos
-      sistemas que funcionan.
-    </p>
-  </header>
+<section class="background-tech">
+  <section class="cases">
+    <div class="cases-header">
+      <h2>Casos de éxito</h2>
+      <p>Soluciones reales que generan impacto medible en procesos y resultados.</p>
+    </div>
 
-  <div class="portfolio__grid">
-    <!-- Card 1 -->
-    <article class="portfolio-card">
-      <div class="portfolio-card__meta">
-        <span>Automatización</span>
-        <span>Integraciones</span>
-      </div>
+    <div class="cases-grid">
+      <!-- Caso destacado -->
+      <article class="case featured">
+        <span class="case-tag">Automatización · Integraciones</span>
+        <h3>Automatización de pedidos y despachos</h3>
+        <p>
+          Centralizamos y automatizamos el flujo completo de pedidos,
+          reduciendo errores humanos y tiempos operativos.
+        </p>
 
-      <h3>Automatización de pedidos y despachos</h3>
+        <ul class="case-metrics">
+          <li><strong>↓ 60%</strong><span>Tiempo operativo</span></li>
+          <li><strong>↓ Errores</strong><span>Procesos manuales</span></li>
+          <li><strong>↑ Control</strong><span>Trazabilidad total</span></li>
+        </ul>
+      </article>
 
-      <p class="portfolio-card__description">
-        Centralización y automatización del flujo completo de pedidos,
-        reduciendo errores y tiempos operativos.
-      </p>
+      <!-- Casos secundarios -->
+      <article class="case">
+        <span class="case-tag">Integraciones</span>
+        <h4>Shopify + Google Sheets</h4>
+        <p>Pedidos sincronizados en tiempo real para monitoreo y reporting.</p>
+        <ul>
+          <li>Datos en tiempo real</li>
+          <li>Menos tareas manuales</li>
+          <li>Mayor trazabilidad</li>
+        </ul>
+      </article>
 
-      <ul class="portfolio-card__results">
-        <li>↓ 60% tiempo operativo</li>
-        <li>↓ errores humanos</li>
-        <li>↑ control del proceso</li>
-      </ul>
-    </article>
-
-    <!-- Card 2 -->
-    <article class="portfolio-card">
-      <div class="portfolio-card__meta">
-        <span>Integraciones</span>
-      </div>
-
-      <h3>Integración Shopify + Google Sheets</h3>
-
-      <p class="portfolio-card__description">
-        Sincronización automática de pedidos con hojas de cálculo
-        para monitoreo y reporting en tiempo real.
-      </p>
-
-      <ul class="portfolio-card__results">
-        <li>Datos en tiempo real</li>
-        <li>Menos tareas manuales</li>
-        <li>Mayor trazabilidad</li>
-      </ul>
-    </article>
-
-    <!-- Card 3 -->
-    <article class="portfolio-card">
-      <div class="portfolio-card__meta">
-        <span>Web</span>
-      </div>
-
-      <h3>Sitio web corporativo orientado a conversión</h3>
-
-      <p class="portfolio-card__description">
-        Diseño y desarrollo de un sitio rápido, claro y enfocado
-        en generar contactos de calidad.
-      </p>
-
-      <ul class="portfolio-card__results">
-        <li>Carga optimizada</li>
-        <li>Mensaje claro</li>
-        <li>Mejor tasa de contacto</li>
-      </ul>
-    </article>
-  </div>
+      <article class="case">
+        <span class="case-tag">Web</span>
+        <h4>Sitio web orientado a conversión</h4>
+        <p>Landing rápida, clara y enfocada en generar contactos de calidad.</p>
+        <ul>
+          <li>Carga optimizada</li>
+          <li>Mensaje claro</li>
+          <li>Mejor tasa de contacto</li>
+        </ul>
+      </article>
+    </div>
+  </section>
 </section>
