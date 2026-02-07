@@ -5,6 +5,7 @@
     var(--color-background),
     rgba(79, 191, 185, 0.12)
   );
+  border-bottom: 2px solid var(--color-accent);
 }
 
 .cases-header {

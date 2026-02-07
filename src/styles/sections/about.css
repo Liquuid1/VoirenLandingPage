@@ -1,259 +1,147 @@
-.about {
-  padding: 5rem 2.5rem;
-  background: linear-gradient(
-    135deg,
-    rgba(31, 112, 108, 0.05),
-    rgba(213, 177, 239, 0.05)
-  );
+.about-background {
   position: relative;
+  padding: 3rem 1.5rem;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(79, 191, 185, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(47, 143, 139, 0.18),
+      transparent 60%
+    ),
+    url("https://cdn.pixabay.com/photo/2022/06/01/12/38/bigdata-7235676_1280.png");
   overflow: hidden;
 }
 
-.about::before {
-  content: "";
-  position: absolute;
-  bottom: -10%;
-  left: -5%;
-  width: 350px;
-  height: 350px;
-  background: radial-gradient(circle, rgba(58, 167, 163, 0.15), transparent);
-  border-radius: 50%;
-  z-index: 0;
+.about-intro {
+  display: flex;          
+  flex-direction: column;    
+  justify-content: center;   
+  align-items: center;       
+  text-align: center;         
+  background-color: var(--color-primary);
+  width: 600px;
+  margin: 1rem auto;
+  padding: 2rem;
+  border-radius: 20px;
 }
 
-.about__container {
-  max-width: 1200px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
+
+.about-intro h2 {
+  font-size: 2.6rem;
+  color: var(--color-background);
+  background-color: var(--color-primary);
 }
 
-/* Intro Section */
-.about__intro {
-  text-align: center;
-  margin-bottom: 4rem;
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
+.about-intro p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--color-background);
+  background-color: var(--color-primary);
 }
 
-.about__intro h2 {
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  color: var(--primary-color);
-  margin-bottom: 1rem;
-  font-weight: 700;
-}
-
-.about__intro p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #334155;
-}
-
-/* Misión y Visión */
-.about__values {
+.about-values {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
-  margin-bottom: 4rem;
+  max-width: 1000px;
+  margin: 0 auto 3rem;
 }
 
 .value-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
   padding: 2.5rem;
-  background: white;
-  border: 1px solid rgba(31, 112, 108, 0.15);
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(31, 112, 108, 0.08);
-  transition: all 0.3s ease;
-}
-
-.value-card:hover {
-  border-color: rgba(31, 112, 108, 0.3);
-  box-shadow: 0 8px 24px rgba(31, 112, 108, 0.15);
-  transform: translateY(-4px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
 }
 
 .value-card h3 {
-  color: var(--primary-color);
+  color: var(--color-primary);
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  font-weight: 700;
+  background: transparent;
 }
 
 .value-card p {
-  color: #334155;
-  line-height: 1.7;
-  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  background: transparent;
 }
 
-/* Team Section */
-.about__team {
-  margin-top: 3rem;
-}
+/* TEAM */
 
-.about__team-title {
+.about-team {
   text-align: center;
-  font-size: 1.5rem;
-  color: var(--primary-color);
+  max-width: 1100px;
+  margin: 0 auto;
+  background-color: var(--color-background);
+  border-radius: 28px;
+}
+
+.about-team h3 {
+  font-size: 2rem;
   margin-bottom: 3rem;
-  font-weight: 700;
+  color: var(--color-secondary);
+  background: transparent;
 }
 
 .team-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  border-radius: 28px;
 }
 
 .team-member {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(31, 112, 108, 0.1);
-  border-radius: 1rem;
-  transition: all 0.3s ease;
+  background: white;
+  border-radius: 28px;
+  padding: 3rem 2rem;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+  background-color: var(--color-secondary);
 }
 
-.team-member:hover {
-  border-color: rgba(31, 112, 108, 0.3);
-  background: rgba(255, 255, 255, 0.8);
-  box-shadow: 0 8px 24px rgba(31, 112, 108, 0.1);
-  transform: translateY(-8px);
-}
-
-/* Member Image */
-.member-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  overflow: hidden;
-  margin-bottom: 1.5rem;
-  border: 3px solid var(--primary-color);
-  box-shadow: 0 6px 20px rgba(31, 112, 108, 0.2);
-  flex-shrink: 0;
-}
-
-.member-image img {
-  width: 100%;
-  height: 100%;
+.team-member img {
+  width: 120px;
+  height: 120px;
   object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 10px 30px rgba(47, 143, 139, 0.35);
 }
 
-/* Member Info */
-.member-info h4 {
+.team-member h4 {
   font-size: 1.3rem;
-  color: var(--dark-text-color);
-  margin: 0 0 0.5rem 0;
-  font-weight: 700;
+  background: transparent;
 }
 
-.member-role {
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin: 0 0 1rem 0;
+.team-member span {
+  display: block;
+  margin: 0.4rem 0 1rem;
+  font-size: 0.85rem;
+  color: var(--color-accent);
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  background: transparent;
 }
 
-.member-bio {
-  color: #334155;
+.team-member p {
   font-size: 0.95rem;
+  color: var(--color-background);
   line-height: 1.6;
-  margin: 0;
+  background: transparent;
 }
+
+
 
 /* Responsive */
-@media (max-width: 768px) {
-  .about {
-    padding: 3.5rem 2rem;
-  }
 
-  .about__intro h2 {
-    font-size: 1.8rem;
-  }
-
-  .about__intro p {
-    font-size: 0.95rem;
-  }
-
-  .about__values {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-    margin-bottom: 3rem;
-  }
-
-  .value-card {
-    padding: 2rem;
-  }
-
+@media (max-width: 900px) {
+  .about-values,
   .team-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
-  }
-
-  .member-image {
-    width: 130px;
-    height: 130px;
-  }
-
-  .member-info h4 {
-    font-size: 1.1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .about {
-    padding: 2.5rem 1.5rem;
-  }
-
-  .about__intro h2 {
-    font-size: 1.5rem;
-  }
-
-  .about__intro p {
-    font-size: 0.9rem;
-  }
-
-  .about__team-title {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-
-  .value-card {
-    padding: 1.5rem;
-  }
-
-  .value-card h3 {
-    font-size: 1.2rem;
-  }
-
-  .value-card p {
-    font-size: 0.9rem;
-  }
-
-  .team-member {
-    padding: 1rem;
-  }
-
-  .member-image {
-    width: 120px;
-    height: 120px;
-  }
-
-  .member-info h4 {
-    font-size: 1rem;
-  }
-
-  .member-role {
-    font-size: 0.8rem;
-  }
-
-  .member-bio {
-    font-size: 0.9rem;
   }
 }
