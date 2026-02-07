@@ -14,6 +14,7 @@
     ),
     url("https://cdn.pixabay.com/photo/2022/06/01/12/38/bigdata-7235676_1280.png");
   overflow: hidden;
+  border-bottom: 3px solid var(--color-primary);
 }
 
 .about-intro {

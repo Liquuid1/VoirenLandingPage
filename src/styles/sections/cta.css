@@ -1,51 +1,150 @@
-.cta {
-  margin: 5rem 2.5rem;
-  padding: 4rem 2rem;
+.cta-final {
+  position: relative;
+  padding: 80px 24px;
+  overflow: hidden;
+
+  /* Fondo base oscuro (clave para contraste) */
+  background: #0f2f2d;
+}
+
+/* Overlay oscuro para apagar el background global */
+.cta-final::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 47, 45, 0.88);
+  z-index: 0;
+}
+
+/* Glow ambiental sutil */
+.cta-final::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(45, 212, 191, 0.18),
+      transparent 55%
+    ),
+    radial-gradient(
+      circle at bottom left,
+      rgba(20, 184, 166, 0.15),
+      transparent 60%
+    );
+  z-index: 0;
+}
+
+/* =========================
+   CONTENEDOR
+   ========================= */
+
+.cta-container {
+  position: relative;
+  z-index: 1;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 38px 28px;
+
   text-align: center;
 
-  background: linear-gradient(
-    135deg,
-    rgba(58, 167, 163, 0.12),
-    rgba(58, 167, 163, 0.03)
-  );
+  /* Glass correcto (SIN opacity global) */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 
-  border: 1px solid rgba(58, 167, 163, 0.35);
+  border-radius: 28px;
+
+  box-shadow:
+    0 40px 90px rgba(0, 0, 0, 0.45),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.12);
 }
 
-.cta h2 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  margin-bottom: 1rem;
-  color: #0f172a;
+/* =========================
+   TEXTO
+   ========================= */
+
+.cta-title {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 20px;
+  background: transparent;
 }
 
-.cta p {
-  max-width: 480px;
-  margin: 0 auto 2rem;
-  color: #334155;
+.cta-subtitle {
+  max-width: 640px;
+  margin: 0 auto 48px;
+
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  background: transparent;
 }
 
-.cta button {
-  background: linear-gradient(
-    135deg,
-    #1f6f6b,
-    #3aa7a3
-  );
+/* =========================
+   BOTÓN
+   ========================= */
 
-  color: white;
+.cta-button {
+  display: inline-block;
+
+  padding: 18px 52px;
+  border-radius: 999px;
   border: none;
-  padding: 0.85rem 2.2rem;
-  font-size: 0.8rem;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+
+  background: linear-gradient(
+    135deg,
+    #2dd4bf,
+    #14b8a6
+  );
+
+  color: #0f2f2d;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+
   cursor: pointer;
+
+  box-shadow:
+    0 20px 45px rgba(45, 212, 191, 0.4);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
 }
+
+.cta-button:hover {
+  transform: translateY(-3px) scale(1.04);
+  box-shadow:
+    0 32px 70px rgba(45, 212, 191, 0.55);
+  filter: brightness(1.05);
+}
+
+/* =========================
+   MICRO COPY
+   ========================= */
+
+.cta-note {
+  display: block;
+  margin-top: 26px;
+  font-size: 0.85rem;
+  color: var(--color-background);
+  background: transparent;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
 @media (max-width: 768px) {
-  .cta {
-    margin: 4rem 1.5rem;
-    padding: 3rem 1.5rem;
+  .cta-container {
+    padding: 56px 28px;
   }
 
-  .cta button {
-    width: 100%;
+  .cta-subtitle {
+    font-size: 1rem;
   }
 }
