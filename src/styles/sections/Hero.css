@@ -3,8 +3,8 @@
   padding: 3rem 2.5rem 3rem;
   overflow: hidden;
   background: linear-gradient(to bottom,
-    #E6F4F3,
-    #7FD0C8
+    #1F5E5B,
+    #4FBFB9 
   );
 }
 .hero::after {
@@ -17,8 +17,8 @@
 
   background: linear-gradient(
     135deg,
-    rgba(58, 167, 163, 0.25),
-    rgba(58, 167, 163, 0.05)
+    #4FBFB9,
+    #1F5E5B
   );
 
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
@@ -39,27 +39,25 @@
 .hero h1 {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
   line-height: 1.15;
-  color: var(--color-text-primary);
+  color: var(--color-background);
   margin-bottom: 1.5rem;
   background: transparent;
 }
 
 .hero h1 span {
-  color: var(--color-primary);
-  text-decoration: underline;
+  color: var(--color-accent);
   background: transparent;
 }
 .hero p {
   font-size: 1.5rem;
   line-height: 1.6;
   max-width: 560px;
-  color: var(--color-text-secondary);
-  -webkit-text-stroke: 0.3px var(--color-text-primary);
+  color: var(--color-background);
   background: transparent;
 }
 .hero__actions {
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-start;
   align-items: center;
   border-radius: 15px;
   background: transparent;

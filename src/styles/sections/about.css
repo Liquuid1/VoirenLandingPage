@@ -117,6 +117,7 @@
 .team-member h4 {
   font-size: 1.3rem;
   background: transparent;
+  color: var(--color-background);
 }
 
 .team-member span {

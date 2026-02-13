@@ -1,61 +1,71 @@
 ---
 import "../../styles/sections/Services.css"
 ---
+
 <section class="services" id="services">
   <header class="services__header">
-    <h2>Servicios pensados para que la tecnología trabaje por ti</h2>
+    <h2>Soluciones para una operación más eficiente</h2>
     <p>
-      Diseñamos y construimos soluciones de software a medida,
-      adaptadas a tus procesos reales y a las herramientas que ya usas.
+      Transformamos operaciones activas en sistemas estructurados, eficientes y preparados para crecer.
     </p>
   </header>
 
-  <div class="services__carousel-wrapper">
-    <button class="services__nav services__nav--prev" aria-label="Anterior">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="15 18 9 12 15 6"></polyline>
-      </svg>
-    </button>
-    
-    <div class="services__plans">
-      <article class="plan">
-        <h3>Integraciones</h3>
-        <p>Conectamos tus sistemas con seguridad y precisión.</p>
-        <span class="plan__tag">Ideal para herramientas externas</span>
-        <button class="plan__cta">Solicitar integración</button>
-      </article>
+  <div class="services__packages">
+    <article class="package" data-package="automation">
+      <div class="package__body">
+        <h3 class="package__title">Automatización de procesos</h3>
+        <p class="package__description">
+          Optimiza y automatiza tus flujos de trabajo para ahorrar tiempo y reducir errores.
+        </p>
+        <ul class="package__highlights">
+          <li>Automatización de tareas repetitivas</li>
+          <li>Integración con sistemas existentes</li>
+          <li>Monitoreo y reportes automáticos</li>
+        </ul>
+      </div>
+      <button class="package__cta" data-package-btn="automation">
+        Ver detalles
+        <img src="icons/eye.svg" alt="">
+      </button>
+    </article>
 
-      <article class="plan">
-        <h3>Automatizaciones</h3>
-        <p>Optimiza tu flujo de trabajo y ahorra tiempo.</p>
-        <span class="plan__tag">Ahorra tiempo</span>
-        <button class="plan__cta">Automatiza tu proceso</button>
-      </article>
+    <article class="package" data-package="systems">
+      <div class="package__body">
+        <h3 class="package__title">Sistemas internos a medida</h3>
+        <p class="package__description">
+          Desarrollamos sistemas internos personalizados que se adaptan perfectamente a tus procesos.
+        </p>
+        <ul class="package__highlights">
+          <li>Desarrollo backend especializado</li>
+          <li>Base de datos optimizada</li>
+          <li>Interfaces intuitivas y eficientes</li>
+        </ul>
+      </div>
+      <button class="package__cta" data-package-btn="systems">
+        Ver detalles
+        <img src="icons/eye.svg" alt="">
+      </button>
+    </article>
 
-      <article class="plan">
-        <h3>Sitios web</h3>
-        <p>Desarrollamos sitios rápidos, claros y escalables.</p>
-        <span class="plan__tag">Recomendado</span>
-        <button class="plan__cta">Solicitar desarrollo</button>
-      </article>
-
-      <article class="plan">
-        <h3>Marketing digital</h3>
-        <p>Define y optimiza tu estrategia digital.</p>
-        <span class="plan__tag">Resultados medibles</span>
-        <button class="plan__cta">Solicitar asesoría</button>
-      </article>
-    </div>
-    
-    <button class="services__nav services__nav--next" aria-label="Siguiente">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-        <polyline points="9 18 15 12 9 6"></polyline>
-      </svg>
-    </button>
+    <article class="package" data-package="data">
+      <div class="package__body">
+        <h3 class="package__title">Datos y reportes</h3>
+        <p class="package__description">
+          Transforma tus datos en información valiosa con reportes actionables y visualizaciones.
+        </p>
+        <ul class="package__highlights">
+          <li>Análisis de datos avanzado</li>
+          <li>Dashboard interactivos</li>
+          <li>Reportes personalizados</li>
+        </ul>
+      </div>
+      <button class="package__cta" data-package-btn="data">
+        Ver detalles
+        <img src="icons/eye.svg" alt="">
+      </button>
+    </article>
   </div>
-
-
 </section>
 
-<script src="../../scripts/sections/services-carousel.js"></script>
+<script src="../../scripts/sections/services-packages.js"></script>
 
