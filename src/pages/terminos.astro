@@ -1,0 +1,168 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/pages/terminos.css';
+const lastUpdated = '13 de febrero de 2026';
+---
+
+<BaseLayout>
+	<Fragment slot="head">
+		<title>Voiren | Términos y condiciones</title>
+		<meta
+			name="description"
+			content="Términos y condiciones de los servicios de Voiren."
+		/>
+	</Fragment>
+
+	<section class="terms-hero">
+		<div class="terms-hero__content">
+			<p class="terms-eyebrow">Legal</p>
+			<h1>Términos y condiciones</h1>
+			<p>
+				Estos términos rigen el uso de nuestros servicios, sitio web y
+				entregables. Al contratar o navegar, aceptas lo aquí indicado.
+			</p>
+			<div class="terms-meta">
+				<span>Última actualización: {lastUpdated}</span>
+				<span>Vigencia: inmediata</span>
+			</div>
+		</div>
+	</section>
+
+	<section class="terms-content">
+		<div class="terms-layout">
+			<aside class="terms-index">
+				<h2>Contenido</h2>
+				<ol>
+					<li><a href="#alcance">Alcance</a></li>
+					<li><a href="#servicios">Servicios</a></li>
+					<li><a href="#proceso">Proceso y entregables</a></li>
+					<li><a href="#pagos">Pagos y facturación</a></li>
+					<li><a href="#propiedad">Propiedad intelectual</a></li>
+					<li><a href="#confidencialidad">Confidencialidad</a></li>
+					<li><a href="#garantias">Garantías y limitaciones</a></li>
+					<li><a href="#soporte">Soporte y mantenimiento</a></li>
+					<li><a href="#cancelacion">Cancelación</a></li>
+					<li><a href="#datos">Datos y privacidad</a></li>
+					<li><a href="#contacto">Contacto</a></li>
+				</ol>
+			</aside>
+
+			<div class="terms-panels">
+				<article id="alcance" class="terms-card">
+					<h3>1. Alcance</h3>
+					<p>
+						Estos términos regulan la relación entre Voiren y sus clientes
+						respecto a la prestación de servicios de desarrollo, automatización
+						e integraciones. Cualquier acuerdo adicional quedará respaldado por
+						una propuesta comercial o contrato específico.
+					</p>
+				</article>
+
+				<article id="servicios" class="terms-card">
+					<h3>2. Servicios</h3>
+					<p>
+						Los servicios incluyen consultoría técnica, discovery, diseño,
+						desarrollo, integraciones y soporte. El alcance se define en una
+						propuesta o brief aprobado por ambas partes.
+					</p>
+					<ul>
+						<li>Evaluación inicial y plan de trabajo.</li>
+						<li>Definición de hitos y prioridades.</li>
+						<li>Entrega de avances con validación del cliente.</li>
+					</ul>
+				</article>
+
+				<article id="proceso" class="terms-card">
+					<h3>3. Proceso y entregables</h3>
+					<p>
+						Los entregables se proporcionan según los hitos pactados. Los
+						cambios fuera de alcance se cotizan y aprueban antes de ejecutarse.
+					</p>
+					<div class="terms-highlight">
+						Los tiempos pueden variar por dependencias del cliente o terceros.
+					</div>
+				</article>
+
+				<article id="pagos" class="terms-card">
+					<h3>4. Pagos y facturación</h3>
+					<p>
+						Las condiciones de pago se detallan en la propuesta. En general, se
+						requiere un anticipo para iniciar trabajos y los saldos se facturan
+						por hitos o mensualidad.
+					</p>
+					<ul>
+						<li>Plazos de pago: 7 a 15 días desde la factura.</li>
+						<li>Intereses por mora: según normativa aplicable.</li>
+						<li>Costos de terceros se trasladan con aprobación previa.</li>
+					</ul>
+				</article>
+
+				<article id="propiedad" class="terms-card">
+					<h3>5. Propiedad intelectual</h3>
+					<p>
+						El cliente obtiene una licencia de uso sobre los entregables una vez
+						cancelado el total. Voiren conserva know-how, frameworks y
+						componentes reutilizables no exclusivos.
+					</p>
+				</article>
+
+				<article id="confidencialidad" class="terms-card">
+					<h3>6. Confidencialidad</h3>
+					<p>
+						Ambas partes se comprometen a mantener en reserva información
+						sensible, estratégica y datos de acceso. Esta obligación se mantiene
+						aún después de finalizado el servicio.
+					</p>
+				</article>
+
+				<article id="garantias" class="terms-card">
+					<h3>7. Garantías y limitaciones</h3>
+					<p>
+						Voiren garantiza la ejecución profesional y el cumplimiento del
+						alcance pactado. No se garantiza la ausencia total de errores ni
+						resultados comerciales específicos.
+					</p>
+					<ul>
+						<li>Correcciones por bugs dentro del alcance y plazo acordado.</li>
+						<li>No incluye cambios funcionales posteriores sin nueva cotización.</li>
+					</ul>
+				</article>
+
+				<article id="soporte" class="terms-card">
+					<h3>8. Soporte y mantenimiento</h3>
+					<p>
+						El soporte posterior se acuerda en un plan independiente o como
+						parte de la propuesta inicial. Incluye monitoreo, ajustes menores y
+						mejoras evolutivas según prioridad.
+					</p>
+				</article>
+
+				<article id="cancelacion" class="terms-card">
+					<h3>9. Cancelación</h3>
+					<p>
+						Cualquiera de las partes puede finalizar el servicio con aviso
+						previo. Se facturará el trabajo efectivamente ejecutado hasta la
+						fecha de cierre.
+					</p>
+				</article>
+
+				<article id="datos" class="terms-card">
+					<h3>10. Datos y privacidad</h3>
+					<p>
+						El tratamiento de datos personales se rige por la Política de
+						Privacidad. Voiren actúa como encargado de tratamiento cuando
+						corresponde.
+					</p>
+				</article>
+
+				<article id="contacto" class="terms-card">
+					<h3>11. Contacto</h3>
+					<p>
+						Para consultas legales puedes escribir a
+						<a href="mailto:contacto@voiren.com">contacto@voiren.com</a>.
+					</p>
+				</article>
+			</div>
+		</div>
+	</section>
+</BaseLayout>
