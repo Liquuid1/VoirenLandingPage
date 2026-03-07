@@ -439,6 +439,7 @@
   background-color: var(--color-primary);
   color: #fff;
   border: none;
+  text-decoration: none;
   padding: 1rem 2rem;
   font-size: 1.1rem;
   font-weight: 600;

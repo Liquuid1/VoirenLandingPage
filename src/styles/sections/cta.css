@@ -89,6 +89,7 @@
 
 .cta-button {
   display: inline-block;
+  text-decoration: none;
 
   padding: 18px 52px;
   border-radius: 999px;

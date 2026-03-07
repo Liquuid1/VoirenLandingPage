@@ -66,9 +66,10 @@
   max-width: 360px;
 }
 
-.hero__actions button {
+.hero__actions .cta {
   background-color: var(--color-primary);
   color: var(--color-background);
+  text-decoration: none;
   padding: 14px 24px;
   border: none;
   padding: 0.6rem 1.2rem;
@@ -79,25 +80,10 @@
   transition: all 0.3s ease;
 }
 
-.hero__actions button:hover {
+.hero__actions .cta:hover {
   background: var(--color-accent);
   color: var(--color-text-primary);
   text-decoration: underline;
-}
-
-.hero__actions a {
-  font-size: 0.85rem;
-  color: var(--teal-dark);
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-  background: transparent;
-  border: 2px solid var(--color-primary);
-  padding: 14px 28px;
-  font-size: medium;
-}
-
-.hero__actions a:hover {
-  border-color: var(--color-secondary);
 }
 .hero__trust {
   display: flex;

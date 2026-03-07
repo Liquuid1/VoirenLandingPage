@@ -44,7 +44,7 @@
   justify-content: flex-end;
 }
 
-.header__right button {
+.header__right a {
   background: transparent;
   color: var(--color-text-primary);
   border: none;
@@ -52,9 +52,10 @@
   margin: 0.5rem;
   letter-spacing: 0.1em;
   cursor: pointer;
+  text-decoration: none;
 
 }
-.header__right button:hover {
+.header__right a:hover {
   background-color: var(--color-accent);
   border-bottom: 2px solid var(--color-accent);
   text-decoration: underline;
